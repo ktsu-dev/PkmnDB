@@ -2,8 +2,8 @@ namespace ktsu.PkmnDB;
 
 public class DeckCard
 {
-	public string Id { get; set; } = string.Empty;
-	public string Name { get; set; } = string.Empty;
-	public string Rarity { get; set; } = string.Empty;
+	public CardId Id { get; set; } = new();
+	public CardName Name { get; set; } = new();
+	public CardRarity Rarity { get; set; } = new();
 	public int Count { get; set; }
 }

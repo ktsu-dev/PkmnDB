@@ -2,6 +2,6 @@ namespace ktsu.PkmnDB;
 
 public class SetImages
 {
-	public string Symbol { get; set; } = string.Empty;
-	public string Logo { get; set; } = string.Empty;
+	public Uri Symbol { get; set; } = new("");
+	public Uri Logo { get; set; } = new("");
 }

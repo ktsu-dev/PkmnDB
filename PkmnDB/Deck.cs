@@ -1,9 +1,14 @@
 namespace ktsu.PkmnDB;
 
+using ktsu.StrongStrings;
+
+public sealed record DeckId : StrongStringAbstract<DeckId> { }
+public sealed record DeckName : StrongStringAbstract<DeckName> { }
+
 public class Deck
 {
-	public string Id { get; set; } = string.Empty;
-	public string Name { get; set; } = string.Empty;
-	public List<string> Types { get; set; } = [];
+	public DeckId Id { get; set; } = new();
+	public DeckName Name { get; set; } = new();
+	public List<CardType> Types { get; set; } = [];
 	public List<DeckCard> Cards { get; set; } = [];
 }

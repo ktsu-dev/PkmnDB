@@ -1,7 +1,11 @@
 namespace ktsu.PkmnDB;
 
+using ktsu.StrongStrings;
+
+public sealed record ResistanceValue : StrongStringAbstract<ResistanceValue> { }
+
 public class Resistance
 {
-	public string Type { get; set; } = string.Empty;
-	public string Value { get; set; } = string.Empty;
+	public CardType Type { get; set; } = new();
+	public ResistanceValue Value { get; set; } = new();
 }

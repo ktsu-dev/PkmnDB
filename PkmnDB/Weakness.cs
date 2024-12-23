@@ -1,7 +1,11 @@
 namespace ktsu.PkmnDB;
 
+using ktsu.StrongStrings;
+
+public sealed record WeaknessValue : StrongStringAbstract<WeaknessValue> { }
+
 public class Weakness
 {
-	public string Type { get; set; } = string.Empty;
-	public string Value { get; set; } = string.Empty;
+	public CardType Type { get; set; } = new();
+	public WeaknessValue Value { get; set; } = new();
 }

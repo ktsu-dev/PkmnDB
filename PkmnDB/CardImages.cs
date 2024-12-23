@@ -2,6 +2,6 @@ namespace ktsu.PkmnDB;
 
 public class CardImages
 {
-	public string Small { get; set; } = string.Empty;
-	public string Large { get; set; } = string.Empty;
+	public Uri Small { get; set; } = new("");
+	public Uri Large { get; set; } = new("");
 }

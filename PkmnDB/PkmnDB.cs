@@ -1,5 +1,6 @@
 namespace ktsu.PkmnDB;
 
-public class PkmnDB
+public static class PkmnDB
 {
+	internal static Dictionary<string, CardSet> CardSets { get; private set; } = [];
 }
