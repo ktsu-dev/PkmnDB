@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuzzySearch", "FuzzySearch\FuzzySearch.csproj", "{F5F5BD1F-B858-4F16-8744-0B944AB7C651}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PkmnDB", "PkmnDB\PkmnDB.csproj", "{178D5188-DB45-4EA9-AA4F-A8B2CADB596C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F5F5BD1F-B858-4F16-8744-0B944AB7C651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F5F5BD1F-B858-4F16-8744-0B944AB7C651}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F5F5BD1F-B858-4F16-8744-0B944AB7C651}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F5F5BD1F-B858-4F16-8744-0B944AB7C651}.Release|Any CPU.Build.0 = Release|Any CPU
+		{178D5188-DB45-4EA9-AA4F-A8B2CADB596C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{178D5188-DB45-4EA9-AA4F-A8B2CADB596C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{178D5188-DB45-4EA9-AA4F-A8B2CADB596C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{178D5188-DB45-4EA9-AA4F-A8B2CADB596C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

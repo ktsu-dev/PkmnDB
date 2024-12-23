@@ -1,2 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <Content Include="$(SolutionDirectory)\pokemon-tcg-data\cards\en\*.json" Visible="True" CopyToOutputDirectory="Always" Pack="True" PackagePath="data\cards" Link="data\cards\%(RecursiveDir)%(Filename)%(Extension)"/>
+    <Content Include="$(SolutionDirectory)\pokemon-tcg-data\decks\en\*.json" Visible="True" CopyToOutputDirectory="Always" Pack="True" PackagePath="data\decks" Link="data\decks\%(RecursiveDir)%(Filename)%(Extension)"/>
+    <Content Include="$(SolutionDirectory)\pokemon-tcg-data\sets\*.json" Visible="True" CopyToOutputDirectory="Always" Pack="True" PackagePath="data\sets" Link="data\sets\%(RecursiveDir)%(Filename)%(Extension)"/>
+  </ItemGroup>
 </Project>
