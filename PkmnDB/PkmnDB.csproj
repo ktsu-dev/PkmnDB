@@ -5,6 +5,6 @@
     <Content Include="$(SolutionDirectory)\pokemon-tcg-data\sets\*.json" Visible="True" CopyToOutputDirectory="Always" Pack="True" PackagePath="data\sets" Link="data\sets\%(RecursiveDir)%(Filename)%(Extension)" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="ktsu.StrongPaths" Version="1.1.40" />
+    <PackageReference Include="ktsu.StrongPaths" Version="1.1.41" />
   </ItemGroup>
 </Project>
