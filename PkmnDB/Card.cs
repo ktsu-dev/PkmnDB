@@ -1,20 +1,23 @@
 namespace ktsu.PkmnDB;
 
 using System.Collections.Generic;
-using ktsu.StrongStrings;
+using System.Text.Json.Serialization;
+using ktsu.Semantics;
 
-public sealed record CardId : StrongStringAbstract<CardId> { }
-public sealed record CardName : StrongStringAbstract<CardName> { }
-public sealed record CardSupertype : StrongStringAbstract<CardSupertype> { }
-public sealed record CardSubtype : StrongStringAbstract<CardSubtype> { }
-public sealed record CardLevel : StrongStringAbstract<CardLevel> { }
-public sealed record CardHp : StrongStringAbstract<CardHp> { }
-public sealed record CardType : StrongStringAbstract<CardType> { }
-public sealed record CardRetreatCost : StrongStringAbstract<CardRetreatCost> { }
-public sealed record CardNumber : StrongStringAbstract<CardNumber> { }
-public sealed record CardArtist : StrongStringAbstract<CardArtist> { }
-public sealed record CardRarity : StrongStringAbstract<CardRarity> { }
-public sealed record CardFlavorText : StrongStringAbstract<CardFlavorText> { }
+public sealed record CardId : SemanticString<CardId> { }
+public sealed record CardName : SemanticString<CardName> { }
+public sealed record CardSupertype : SemanticString<CardSupertype> { }
+public sealed record CardSubtype : SemanticString<CardSubtype> { }
+public sealed record CardLevel : SemanticString<CardLevel> { }
+public sealed record CardHp : SemanticString<CardHp> { }
+public sealed record CardType : SemanticString<CardType> { }
+public sealed record CardRetreatCost : SemanticString<CardRetreatCost> { }
+public sealed record CardNumber : SemanticString<CardNumber> { }
+public sealed record CardArtist : SemanticString<CardArtist> { }
+public sealed record CardRarity : SemanticString<CardRarity> { }
+public sealed record CardFlavorText : SemanticString<CardFlavorText> { }
+public sealed record CardRegulationMark : SemanticString<CardRegulationMark> { }
+public sealed record CardSearchData : SemanticString<CardSearchData> { }
 
 public class Card
 {
@@ -38,5 +41,31 @@ public class Card
 	public CardFlavorText FlavorText { get; set; } = new();
 	public List<int> NationalPokedexNumbers { get; set; } = [];
 	public Legalities Legalities { get; set; } = new();
+	public CardRegulationMark RegulationMark { get; set; } = new();
 	public CardImages Images { get; set; } = new();
+
+	internal CardSetId ParseSetId() => Id.Split('-').First().As<CardSetId>();
+
+	[JsonIgnore]
+	public CardSetId CardSetId => cardSetIdCache ??= ParseSetId();
+	private CardSetId? cardSetIdCache;
+
+	[JsonIgnore]
+	public CardSet CardSet
+	{
+		get
+		{
+			if (cardSetCache is null)
+			{
+				PkmnDB.CardSets.TryGetValue(CardSetId, out cardSetCache);
+			}
+
+			return cardSetCache ?? throw new KeyNotFoundException($"CardSet {CardSetId} not found.");
+		}
+	}
+	private CardSet? cardSetCache;
+
+	[JsonIgnore]
+	public CardSearchData CardSearchData => cardSearchDataCache ??= $"{CardSet.CardSetSearchData} {Id} {Name} {Rarity} {RegulationMark} {Supertype} {string.Join(' ', Subtypes.Distinct())} {string.Join(' ', Types.Distinct())} {Number} {Artist} {FlavorText} {string.Join(' ', NationalPokedexNumbers)}".As<CardSearchData>();
+	private CardSearchData? cardSearchDataCache;
 }

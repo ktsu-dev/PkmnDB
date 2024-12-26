@@ -1,8 +1,8 @@
 namespace ktsu.PkmnDB;
 
-using ktsu.StrongStrings;
+using ktsu.Semantics;
 
-public sealed record Legality : StrongStringAbstract<Legality> { }
+public sealed record Legality : SemanticString<Legality> { }
 
 
 public class Legalities

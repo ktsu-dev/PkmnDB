@@ -1,8 +1,8 @@
 namespace ktsu.PkmnDB;
 
-using ktsu.StrongStrings;
+using ktsu.Semantics;
 
-public sealed record WeaknessValue : StrongStringAbstract<WeaknessValue> { }
+public sealed record WeaknessValue : SemanticString<WeaknessValue> { }
 
 public class Weakness
 {

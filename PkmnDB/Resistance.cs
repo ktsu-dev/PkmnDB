@@ -1,8 +1,8 @@
 namespace ktsu.PkmnDB;
 
-using ktsu.StrongStrings;
+using ktsu.Semantics;
 
-public sealed record ResistanceValue : StrongStringAbstract<ResistanceValue> { }
+public sealed record ResistanceValue : SemanticString<ResistanceValue> { }
 
 public class Resistance
 {

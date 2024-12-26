@@ -1,9 +1,9 @@
 namespace ktsu.PkmnDB;
 
-using ktsu.StrongStrings;
+using ktsu.Semantics;
 
-public sealed record DeckId : StrongStringAbstract<DeckId> { }
-public sealed record DeckName : StrongStringAbstract<DeckName> { }
+public sealed record DeckId : SemanticString<DeckId> { }
+public sealed record DeckName : SemanticString<DeckName> { }
 
 public class Deck
 {

@@ -1,10 +1,10 @@
 namespace ktsu.PkmnDB;
 
-using ktsu.StrongStrings;
+using ktsu.Semantics;
 
-public sealed record AbilityName : StrongStringAbstract<AbilityName> { }
-public sealed record AbilityText : StrongStringAbstract<AbilityText> { }
-public sealed record AbilityType : StrongStringAbstract<AbilityType> { }
+public sealed record AbilityName : SemanticString<AbilityName> { }
+public sealed record AbilityText : SemanticString<AbilityText> { }
+public sealed record AbilityType : SemanticString<AbilityType> { }
 
 public class Ability
 {

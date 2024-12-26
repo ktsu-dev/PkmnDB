@@ -1,12 +1,12 @@
 namespace ktsu.PkmnDB;
 
 using System.Collections.Generic;
-using ktsu.StrongStrings;
+using ktsu.Semantics;
 
-public sealed record AttackName : StrongStringAbstract<AttackName> { }
-public sealed record AttackCost : StrongStringAbstract<AttackCost> { }
-public sealed record AttackDamage : StrongStringAbstract<AttackDamage> { }
-public sealed record AttackText : StrongStringAbstract<AttackText> { }
+public sealed record AttackName : SemanticString<AttackName> { }
+public sealed record AttackCost : SemanticString<AttackCost> { }
+public sealed record AttackDamage : SemanticString<AttackDamage> { }
+public sealed record AttackText : SemanticString<AttackText> { }
 
 public class Attack
 {
