@@ -8,5 +8,6 @@ Changes since v1.0.0-alpha.7:
 - Refactor Directory.Build.targets to update metadata packing and remove license generation target ([@matt-edmondson](https://github.com/matt-edmondson))
 - Renamed metadata files ([@matt-edmondson](https://github.com/matt-edmondson))
 - Update data submodule ([@matt-edmondson](https://github.com/matt-edmondson))
+- Update packages ([@matt-edmondson](https://github.com/matt-edmondson))
 
 
