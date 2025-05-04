@@ -11,6 +11,7 @@ Changes since v1.0.0-alpha.7:
 - Add LICENSE template ([@matt-edmondson](https://github.com/matt-edmondson))
 - Add automation scripts for metadata management and versioning ([@matt-edmondson](https://github.com/matt-edmondson))
 - Renamed metadata files ([@matt-edmondson](https://github.com/matt-edmondson))
+- Add detailed XML documentation for Ability, Card, Deck, and related classes; refactor collections to use IReadOnlyCollection ([@matt-edmondson](https://github.com/matt-edmondson))
 ## v1.0.0-alpha.7 (prerelease)
 
 Changes since v1.0.0-alpha.6:
