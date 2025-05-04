@@ -1,3 +1,7 @@
+// Copyright (c) ktsu.dev
+// All rights reserved.
+// Licensed under the MIT license.
+
 namespace ktsu.PkmnDB;
 
 using System.Collections.ObjectModel;
@@ -5,8 +9,8 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using ktsu.Extensions;
 using ktsu.StrongPaths;
-using ktsu.ToStringJsonConverter;
 using ktsu.TextFilter;
+using ktsu.ToStringJsonConverter;
 
 /// <summary>
 /// Provides methods to load and access Pokémon card data, card sets, and decks.
@@ -48,7 +52,7 @@ public static class PkmnDB
 		var cardSetFiles = CardSetDataPath.Contents;
 		foreach (var cardSetFile in cardSetFiles)
 		{
-			string jsonString = File.ReadAllText(cardSetFile);
+			var jsonString = File.ReadAllText(cardSetFile);
 			var cardSet = JsonSerializer.Deserialize<CardSet>(jsonString, JsonSerializerOptions)!;
 			cardSets[cardSet.Id] = cardSet;
 		}
@@ -66,7 +70,7 @@ public static class PkmnDB
 		var cardFiles = CardDataPath.Contents;
 		foreach (var cardFile in cardFiles)
 		{
-			string jsonString = File.ReadAllText(cardFile);
+			var jsonString = File.ReadAllText(cardFile);
 			var card = JsonSerializer.Deserialize<Card>(jsonString, JsonSerializerOptions)!;
 			cards[card.Id] = card;
 		}
@@ -84,7 +88,7 @@ public static class PkmnDB
 		var deckFiles = DeckDataPath.Contents;
 		foreach (var deckFile in deckFiles)
 		{
-			string jsonString = File.ReadAllText(deckFile);
+			var jsonString = File.ReadAllText(deckFile);
 			var deck = JsonSerializer.Deserialize<Deck>(jsonString, JsonSerializerOptions)!;
 			decks[deck.Id] = deck;
 		}

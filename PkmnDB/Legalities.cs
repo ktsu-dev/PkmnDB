@@ -1,9 +1,12 @@
+// Copyright (c) ktsu.dev
+// All rights reserved.
+// Licensed under the MIT license.
+
 namespace ktsu.PkmnDB;
 
 using ktsu.Semantics;
 
 public sealed record Legality : SemanticString<Legality> { }
-
 
 public class Legalities
 {

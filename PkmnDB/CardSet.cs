@@ -1,3 +1,7 @@
+// Copyright (c) ktsu.dev
+// All rights reserved.
+// Licensed under the MIT license.
+
 namespace ktsu.PkmnDB;
 
 using System.Text.Json.Serialization;
@@ -8,7 +12,6 @@ public sealed record CardSetName : SemanticString<CardSetName> { }
 public sealed record CardSetCode : SemanticString<CardSetCode> { }
 public sealed record SeriesName : SemanticString<SeriesName> { }
 public sealed record CardSetSearchData : SemanticString<CardSetSearchData> { }
-
 
 public class CardSet
 {
