@@ -1,6 +1,6 @@
 MIT License
 
-https://github.com/ktsu-dev/ktsu-dev/PkmnDB
+https://github.com/ktsu-dev/PkmnDB
 
 Copyright (c) 2023-2025 ktsu-dev
 
