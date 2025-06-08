@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PkmnDB", "PkmnDB\PkmnDB.csproj", "{178D5188-DB45-4EA9-AA4F-A8B2CADB596C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pkmn", "Pkmn\Pkmn.csproj", "{67E8D3AE-6A71-26F8-AD2D-41FA0188EBAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{178D5188-DB45-4EA9-AA4F-A8B2CADB596C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{178D5188-DB45-4EA9-AA4F-A8B2CADB596C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{178D5188-DB45-4EA9-AA4F-A8B2CADB596C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67E8D3AE-6A71-26F8-AD2D-41FA0188EBAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67E8D3AE-6A71-26F8-AD2D-41FA0188EBAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67E8D3AE-6A71-26F8-AD2D-41FA0188EBAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67E8D3AE-6A71-26F8-AD2D-41FA0188EBAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

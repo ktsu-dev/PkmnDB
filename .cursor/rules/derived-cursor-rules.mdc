@@ -1,0 +1,55 @@
+---
+description: AI rules derived by SpecStory from the project AI interaction history
+globs: *
+---
+
+## Headers
+
+This file defines all project rules, coding standards, workflow guidelines, references, documentation structures, and best practices for the AI coding assistant. It is a living document that evolves with new user–AI interactions.
+
+## TECH STACK
+
+*   C#
+*   ktsu.Semantics
+*   ktsu.ImGuiApp (Version 1.12.5 or later)
+*   ktsu.ImGuiWidgets (Version 1.6.2 or later)
+
+## PROJECT DOCUMENTATION & CONTEXT SYSTEM
+
+*   All public types and members must have XML documentation comments.
+*   Replace mutable `List<T>` properties with `IReadOnlyCollection<T>` and private backing fields to improve code quality and prevent unintended modifications. Provide methods to manipulate the collections.
+*   The `CardSet` property in `Card.cs` should return `null` instead of throwing a `KeyNotFoundException` when a card set isn't found.
+
+## CODING STANDARDS
+
+*   Follow C# coding conventions and best practices.
+*   Adhere to code quality guidelines, including providing XML documentation and using read-only collections where appropriate.
+*   Implement proper resource disposal using the IDisposable pattern.
+
+## DEBUGGING
+
+*   Pay close attention to linter warnings and errors, and resolve them promptly.
+*   Ensure that all code changes maintain existing functionality.
+*   Check GitHub documentation for correct usage of libraries like ktsu.ImGuiApp and ktsu.ImGuiWidgets.
+
+## GUI DEVELOPMENT RULES (ktsu.ImGuiApp & ktsu.ImGuiWidgets)
+
+*   When using `ktsu.ImGuiApp`, use the static `ImGuiApp.Start()` method instead of inheriting from `ImGuiApplication`. Configure the application using callbacks.
+*   Use `ImGuiApp.UploadTextureRGBA` and `ImGuiApp.DeleteTexture` for texture operations.
+*   For TabPanels from `ktsu.ImGuiWidgets`:
+    *   Create a `TabPanel` with proper configuration parameters (e.g., no closable tabs, reorderable tabs).
+    *   Use `AddTab` to add tabs and obtain their IDs. Provide an empty delegate `() => { }` as the action.
+    *   Use `TabPanel.Draw()` to render the tab panel.
+    *   Use `TabPanel.IsTabActive(tabId)` to check the active tab.
+    *   Use `TabPanel.SetActiveTab(tabId)` to set the active tab.
+*   For SearchBoxes from `ktsu.ImGuiWidgets`:
+    *   Use the static `ImGuiWidgets.SearchBox` methods instead of instantiating `SearchBox` objects.
+    *   Use reference variables for search terms.
+    *   Use the `SearchBox` overload that takes a collection and a selector function to filter items.
+    *   Specify `TextFilterType` and `TextFilterMatchOptions` for the search box.  Default to `TextFilterType.Simple` and `TextFilterMatchOptions.IgnoreCase`.
+
+## WORKFLOW & RELEASE RULES
+
+*   Test all code changes thoroughly to ensure they work as expected.
+*   Address all linter warnings and errors before committing code.
+*   Follow a consistent code formatting style.

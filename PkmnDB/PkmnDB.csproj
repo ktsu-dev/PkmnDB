@@ -1,13 +1,13 @@
-<Project Sdk="ktsu.Sdk.Lib/1.8.0">
+﻿<Project Sdk="ktsu.Sdk.Lib">
   <ItemGroup>
     <Content Include="$(SolutionDir)\pokemon-tcg-data\cards\en\*.json" Visible="True" CopyToOutputDirectory="Always" Pack="True" PackagePath="data\cards" Link="data\cards\%(RecursiveDir)%(Filename)%(Extension)" />
     <Content Include="$(SolutionDir)\pokemon-tcg-data\decks\en\*.json" Visible="True" CopyToOutputDirectory="Always" Pack="True" PackagePath="data\decks" Link="data\decks\%(RecursiveDir)%(Filename)%(Extension)" />
     <Content Include="$(SolutionDir)\pokemon-tcg-data\sets\*.json" Visible="True" CopyToOutputDirectory="Always" Pack="True" PackagePath="data\sets" Link="data\sets\%(RecursiveDir)%(Filename)%(Extension)" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="ktsu.SemanticString" Version="1.4.0" />
-    <PackageReference Include="ktsu.StrongPaths" Version="1.3.2" />
-    <PackageReference Include="ktsu.TextFilter" Version="1.5.3" />
-    <PackageReference Include="ktsu.ToStringJsonConverter" Version="1.2.4" />
+    <PackageReference Include="ktsu.SemanticString" />
+    <PackageReference Include="ktsu.StrongPaths" />
+    <PackageReference Include="ktsu.TextFilter" />
+    <PackageReference Include="ktsu.ToStringJsonConverter" />
   </ItemGroup>
 </Project>

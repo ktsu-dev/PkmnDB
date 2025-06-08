@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿
 
-<Project Sdk="ktsu.Sdk.App/1.8.0">
+<Project Sdk="ktsu.Sdk.App">
   <ItemGroup>
-    <PackageReference Include="ktsu.ImGuiApp" Version="1.12.4" />
-    <PackageReference Include="ktsu.ImGuiWidgets" Version="1.6.1" />
+    <PackageReference Include="ktsu.ImGuiApp" />
+    <PackageReference Include="ktsu.ImGuiWidgets" />
     <ProjectReference Include="..\PkmnDB\PkmnDB.csproj" />
   </ItemGroup>
 </Project>

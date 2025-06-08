@@ -5,6 +5,7 @@
 namespace ktsu.PkmnDB;
 
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using ktsu.Semantics;
 
 /// <summary>
@@ -16,6 +17,11 @@ public sealed record DeckId : SemanticString<DeckId> { }
 /// Represents a deck name.
 /// </summary>
 public sealed record DeckName : SemanticString<DeckName> { }
+
+/// <summary>
+/// Represents a deck search data.
+/// </summary>
+public sealed record DeckSearchData : SemanticString<DeckSearchData> { }
 
 /// <summary>
 /// Represents a deck of Pokemon cards.
@@ -56,4 +62,11 @@ public class Deck
 	/// </summary>
 	/// <param name="card">The card to add.</param>
 	public void AddCard(DeckCard card) => _cards.Add(card);
+
+	/// <summary>
+	/// Gets the combined search data for the deck.
+	/// </summary>
+	[JsonIgnore]
+	public DeckSearchData DeckSearchData => deckSearchDataCache ??= $"{Id} {Name}".As<DeckSearchData>();
+	private DeckSearchData? deckSearchDataCache;
 }
